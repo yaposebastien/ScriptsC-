@@ -57,18 +57,6 @@ int main() {
 	   }
 	 
 	   }
-	 
-  
- 
-	 
-		 
-		//cout << "The average of those numbers is :" << ResultChoiceAv << endl;
-		//cout << "The total of those numbers is :" << ResultChoiceTot << endl;
 
-		
-	
-//cout << "Continue?? Y or N"	<< endl;
-//cin >> answer;
-//while (answer == "Y")	
 
 	 
