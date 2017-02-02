@@ -2,7 +2,36 @@
 #include <time.h>
 #include <cstdlib>
 
+void loadingArray(int RandomIntegersArray[], int SizeOfArray);
+void  searchGuessNumber(int numberGuessed, int searchArray[], int SizeToSearch, bool numberOfTimes);
+void printingArray(int printArray[], int SizeToPrint);
+
 using namespace std;
+
+int main() 
+{
+int Size = 15;
+int integersList[Size];
+int numberGuessedByUser;
+
+//Loading the array of integers
+loadingArray(integersList,Size);
+
+    for(int i=0; i<5; i++)
+    {
+    bool numberOfTimesChecking;
+    cout << "Please can you enter a number between 0 and 25 : " ;
+    cin >> numberGuessedByUser;
+    numberOfTimesChecking = true;
+    searchGuessNumber(numberGuessedByUser,integersList,Size,numberOfTimesChecking);
+    }
+//Display Array
+cout << "The content of the array is the following : " << endl;
+printingArray(integersList,Size);
+cout << "\n";
+
+return 0;
+}
 
 void loadingArray(int RandomIntegersArray[], int SizeOfArray)
 {
@@ -42,27 +71,3 @@ void  searchGuessNumber(int numberGuessed, int searchArray[], int SizeToSearch, 
         }
     }   
 }
-int main() 
-{
-int Size = 15;
-int integersList[Size];
-int numberGuessedByUser;
-
-//Loading the array of integers
-loadingArray(integersList,Size);
-
-    for(int i=0; i<5; i++)
-    {
-    bool numberOfTimesChecking;
-    cout << "Please can you enter a number between 0 and 25 : " ;
-    cin >> numberGuessedByUser;
-    numberOfTimesChecking = true;
-    searchGuessNumber(numberGuessedByUser,integersList,Size,numberOfTimesChecking);
-    }
-//Display Array
-cout << "The content of the array is the following : " << endl;
-printingArray(integersList,Size);
-cout << "\n";
-return 0;
-}
-
